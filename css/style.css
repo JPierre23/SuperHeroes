@@ -1,25 +1,41 @@
+body{
+    background-color: bisque;
+}
 main{
     height: 100vh;
     margin: 30px auto;
 }
 .side{
-    display:flex;
-    flex-direction: row;
+    display:grid;
+    grid-template-columns: 200px 200px 200px;
     justify-content: center;
-    align-items: center;
-    background-color: grey;
-   
-
-}
-.square{
-    height: 100px;
-    width: 15%;
+    text-align: left;
+    background-color: burlywood;
+    color: white;
+    gap: 40px;
     
 }
-
+.square{
+    height: 300px;
+    width: 25%;
+    flex-basis: 100px;
+}
 #hero-pic{
+    margin: auto 0;
+    justify-content: center;
+    width: 100%;
+   
+   }
+#pic{
+    display: block;
+    margin: 0 auto;
 
 }
-#hero-name{
-
+.hero-name{
+    margin: 0 auto;
+    text-align: center;
 }
+ .message{
+    margin: 0 auto;
+    text-align: center;
+ }
