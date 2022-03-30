@@ -1,0 +1,25 @@
+main{
+    height: 100vh;
+    margin: 30px auto;
+}
+.side{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+   
+
+}
+.square{
+    height: 200px;
+    width: 15%;
+    
+}
+
+#hero-pic{
+
+}
+#hero-name{
+    
+}
