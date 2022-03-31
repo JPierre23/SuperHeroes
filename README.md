@@ -5,6 +5,7 @@
 **Summary**
 
 | Field | Detail |
+|--------|-----|
 | Project Name | SuperHeroes|
 | Description | Allows users to learn and test their knowledge on their favorite Superheroes.|
 | Developers | Jonathan Pierre |
@@ -31,8 +32,10 @@ Superhero and comic loving audience that believe they know more than anyone else
 ## Screenshots
 
 ![Super Heroes Wireframe](./SuperheroesWireframepic.png)
+![Super Heroes Wireframe](./Site.png)
 
 ## Future Enhancements
 - More questions to test useers
 - Better layout design
 - Users will also be able to select for a Random hero to be chosen
+- Mobile Friendly
