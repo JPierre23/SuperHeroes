@@ -4,15 +4,18 @@ let hero="naruto";
 let $heroName= $(".hero-name");
 let $heroBio= $("#hero-bio")
 let $heroPic= $("#hero-pic");
-let $seachBtn= $("#search-btn");
+let $searchName= $(".search-name");
+let $searchBtn= $("#search-btn");
 let $question= $("#hero-question");
 let $height = $("#hero-height");
 let $heightBtn = $("#height-btn");
 let $message = $(".message")
-$.ajax({
-    url: `https://cors-anywhere.herokuapp.com/http://superheroapi.com/api/5124188170937473/search/naruto`,
-}).then(data =>{ 
-    console.log(data.results[0]);
+
+function searchHero(hero){
+    $.ajax({
+        url: `https://cors-anywhere.herokuapp.com/http://superheroapi.com/api/5124188170937473/search/${hero}`,
+    }).then(data =>{ 
+      console.log(data.results[0]);
     let results= data.results[0];
     $heroName.text(results.name);
     let img = $("<img id=pic />")
@@ -43,6 +46,22 @@ $.ajax({
 
         }
     });
+    $searchBtn.on("click",(event) => {
+        event.preventDefault();
+        $("#pic").remove();
+        console.log($searchName.val())
+        searchHero($searchName.val());
+    });
+    }).catch(error => console.log(error));
+    //https://superheroapi.com/api/5124188170937473/search/naruto j
+        
+}
+let h = prompt("Please Enter the hero you would like to search for");
+//console.log(h);
+searchHero(h);
+// $.ajax({
+//     url: `https://cors-anywhere.herokuapp.com/http://superheroapi.com/api/5124188170937473/search/naruto`,
+// }).then(data =>{ 
 
-}).catch(error => console.log(error));
-//https://superheroapi.com/api/5124188170937473/search/naruto j
+// }).catch(error => console.log(error));
+// //https://superheroapi.com/api/5124188170937473/search/naruto j
